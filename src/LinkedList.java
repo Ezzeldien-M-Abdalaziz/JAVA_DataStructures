@@ -1,4 +1,5 @@
 
+//LinkedListNode class
 class LinkedListNode{
  public int data;
  public LinkedListNode next;
@@ -10,15 +11,48 @@ class LinkedListNode{
 }
 
 
-
+//LinkedListIterator class
 class LinkedListIterator{
+    private LinkedListNode currentNode;
 
+    LinkedListIterator() {
+        currentNode = null;
+    }
+
+    LinkedListIterator(LinkedListNode node) {
+        currentNode = node;
+    }
+
+    int data(){
+        return this.currentNode.data;
+    }
+
+    LinkedListIterator next(){
+        this.currentNode = this.currentNode.next;
+        return this;
+    }
+
+    LinkedListNode current(){
+        return this.currentNode;
+    }
 }
 
 
+//linked list class
 class LinkedList {
    public LinkedListNode head = null;
    public LinkedListNode tail = null;
+
+    LinkedListIterator begin(){
+       LinkedListIterator itr = new LinkedListIterator(this.head);
+       return itr;
+   }
+
+   void printList(){
+        for (LinkedListIterator itr = this.begin(); itr.current() != null; itr = itr.next()){
+            System.out.print(itr.data() + " -> ");
+        }
+   }
 
    void insertLast(int _data) {
        LinkedListNode newNode = new LinkedListNode(_data);
