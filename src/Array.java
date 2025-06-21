@@ -7,19 +7,24 @@ public class Array {
         count = 0;    //number of elements are zero
     }
 
+    //check if the array is full
+    boolean isFull(){
+        return count == items.length;
+    }
+
     //add to the end of the array
     void append(int item){
         //check if there is room in the array
-        if(count == items.length){
-            System.out.println("Array is full , cannot add anymore items");
-            return;
-        }else{
+        if(isFull()){
+            System.out.println("Array is  , cannot append");
+        }
+        else{
             items[count] = item; //insert in the end of the array since count is the real number of elements +1
             count++;  // increase the count
         }
     }
 
-    //get alll items
+    //get all items
     void traverse(){
         for(int i = 0; i<count; i++){
             System.out.println(items[i]);
@@ -42,6 +47,84 @@ public class Array {
     }
 
 
+    //insert in chosen place
+    void insert (int position , int newItem){
+            if(isFull()){
+                System.out.println("Array is full, cannot insert ");
+                return;
+            }
+            for(int i = count; i > position; i--){   //this for loop shifts elements to the second index of every element so we have the position empty for the new item.
+              items[i] = items[i-1];   //shifts element.
+            }
+            items[position] = newItem;
+            count++;
+    }
+
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -14,6 +14,8 @@ public class Main {
         arr.append(2);
         arr.traverse();
         System.out.println(arr.getCount());
+        arr.insert(1,10);
+        arr.traverse();
 
 
         //**********************************************LinkedList********************************************
