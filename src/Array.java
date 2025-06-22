@@ -60,7 +60,54 @@ public class Array {
             count++;
     }
 
+    //delete an item
+    void remove(int position){
+        for(int i = position; i < count -1; i++){
+            items[i] = items[i+1];
+        }
+        count--;
+    }
 
+    //enlarge the size of the array
+//    int[] enlarge (int newSize){
+//        if(newSize < items.length){
+//            System.out.println("Array is  enlarged");
+//            return items;
+//        }
+//
+//        int[] newArr = new int[newSize];
+//        for(int i=0 , j=0; i<count; i++ , j++){
+//            newArr[j] = items[i];
+//        }
+//        return newArr;
+//    }
+
+        //enlarge the size of the array
+        Array enlarge (int newSize){
+            if(newSize > items.length){
+                Array newArr = new Array(newSize);
+                for(int i=0 , j=0; i<count; i++ , j++){
+                    newArr.items[j] = this.items[i];
+                }
+                return newArr;
+            }else{
+                return this;
+            }
+        }
+
+         int[] merge(int[] other){
+            int[] largeArray = new int[items.length + other.length];
+            int index = 0;   //to track all the elements pos
+
+            for(int i = 0; i < count; i++ , index++){   //first array
+                largeArray[index] = items[i];
+            }
+            for(int i = 0; i < other.length; i++ , index++){ //second array
+                largeArray[index] = other[i];
+            }
+
+            return largeArray;
+         }
 
 }
 
