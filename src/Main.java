@@ -3,6 +3,7 @@ public class Main {
 
         //**********************************************Array********************************************
 
+        /*
         Array arr = new Array(6);
         arr.append(1);
         arr.append(2);
@@ -21,13 +22,19 @@ public class Main {
         arr.remove(2);
         arr.remove(3);
         arr.traverse();
-
+*/
         //**********************************************LinkedList********************************************
         LinkedList list = new LinkedList();
         list.insertLast(10);
         list.insertLast(20);
         list.insertLast(30);
-
+        System.out.println(list.head.data);  //first
+        System.out.println(list.tail.data);  //last
         list.printList();  // Output: 10 -> 20 -> 30 -> null
+
+
+        list.insertAfter(40 , list.tail);
+        list.printList();
+        System.out.println(list.tail.data);
     }
 }

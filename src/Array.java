@@ -99,7 +99,7 @@ public class Array {
             int[] largeArray = new int[items.length + other.length];
             int index = 0;   //to track all the elements pos
 
-            for(int i = 0; i < count; i++ , index++){   //first array
+            for(int i = 0; i < count; i++ , index++){   //f irst array
                 largeArray[index] = items[i];
             }
             for(int i = 0; i < other.length; i++ , index++){ //second array

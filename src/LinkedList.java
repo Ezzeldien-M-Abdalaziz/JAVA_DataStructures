@@ -52,6 +52,7 @@ class LinkedList {
         for (LinkedListIterator itr = this.begin(); itr.current() != null; itr = itr.next()){
             System.out.print(itr.data() + " -> ");
         }
+        System.out.println();
    }
 
    void insertLast(int _data) {
@@ -64,6 +65,22 @@ class LinkedList {
            this.tail = newNode;   //exp 10 -> 20 "tail" -> 30 becomes 10 -> 20 -> 30 "tail"
        }
    }
+
+   void insertAfter(int _data, LinkedListNode node) {
+        //validation
+        if(node == null){
+            System.out.println("Node is null");
+            return;
+        }
+        LinkedListNode newNode = new LinkedListNode(_data);  //create new node
+          newNode.next = node.next;  //make the new node pointer same as the chosen node pointer
+          node.next = newNode;  //make the node pointer is the new node
+            if(this.tail == node){
+                this.tail = newNode;
+            }
+   }
+
+
 }
 
 
