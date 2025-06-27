@@ -51,5 +51,15 @@ public class Main {
 
         list.printList();
 
+        list.insertBefore(1,0);
+        list.insertBefore(-1,0);
+        list.printList();
+
+        list.insertBefore(200,10);
+        list.printList();
+
+        list.insertBefore(144,4);
+        list.printList();
+
     }
 }

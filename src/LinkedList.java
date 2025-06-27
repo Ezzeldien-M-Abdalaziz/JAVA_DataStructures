@@ -104,6 +104,15 @@ class LinkedList {
         throw new IndexOutOfBoundsException("Index out of bounds: " + index);
     }
 
+    LinkedListNode findParent(LinkedListNode node) {
+        for (LinkedListIterator itr = this.begin(); itr.current() != null; itr = itr.next()){
+            if(itr.current().next == node){
+                return itr.current();
+            }
+        }
+        return null;
+    }
+
     int count(){
         int count = 0;
         for (LinkedListIterator itr = this.begin(); itr.current() != null; itr = itr.next()){
@@ -115,8 +124,7 @@ class LinkedList {
     void insertAfterEnhanced(int _data, int index) {
         //validation
         if(index > this.count() || index < 0){
-            System.out.println("offset index : " + index);
-            return;
+            throw new IndexOutOfBoundsException("Index out of bounds: " + index);
         }
         LinkedListNode node =  this.find(this.findByIndex(index));    //this gets the node of the index
         if(node == null){
@@ -130,6 +138,37 @@ class LinkedList {
             this.tail = newNode;
         }
     }
+
+
+    void insertBefore(int _data, int index) {
+        //validation
+        if(index > this.count() || index < 0){
+            throw new IndexOutOfBoundsException("Index out of bounds: " + index);
+        }
+        LinkedListNode node =  this.find(this.findByIndex(index));    //this gets the node of the index
+        if(node == null){
+            System.out.println("node is null");
+            return;
+        }
+        LinkedListNode newNode = new LinkedListNode(_data);  //create new node
+
+        if(this.tail == null) {
+            this.tail = newNode;
+            return;
+        }
+
+        if(node == this.head){
+            this.head = newNode;
+            newNode.next = node;
+        }else{
+            LinkedListNode parent = this.findParent(node)  ;//get the prev node of the one i want to insert before
+            newNode.next = node;
+            parent.next = newNode;
+        }
+
+    }
+
+
 
 
 }
