@@ -44,11 +44,12 @@ public class Main {
         System.out.println(list.tail.data);
 
         System.out.println(list.count());
-        System.out.println(list.findByIndex(6));
+        System.out.println(list.findByIndex(0));
 
         list.insertAfterEnhanced(80 , 6);
         list.insertAfter(5 , list.head);
 
         list.printList();
+
     }
 }

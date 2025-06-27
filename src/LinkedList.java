@@ -92,7 +92,7 @@ class LinkedList {
     int findByIndex(int index) {
         //validation
         if(index > this.count() || index < 0){
-            return 0;
+            throw new IndexOutOfBoundsException("Index out of bounds: " + index);
         }
         int count = 0;
         for (LinkedListIterator itr = this.begin(); itr.current() != null; itr = itr.next()){
@@ -101,7 +101,7 @@ class LinkedList {
             }
             count++;
         }
-        return 0;
+        throw new IndexOutOfBoundsException("Index out of bounds: " + index);
     }
 
     int count(){
