@@ -42,5 +42,7 @@ public class Main {
         list.insertAfter(70 , list.tail);
         list.printList();
         System.out.println(list.tail.data);
+
+        list.count();
     }
 }

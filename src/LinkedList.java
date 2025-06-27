@@ -89,6 +89,28 @@ class LinkedList {
         return null;
     }
 
+    void count(){
+        int count = 0;
+        for (LinkedListIterator itr = this.begin(); itr.current() != null; itr = itr.next()){
+            count++;
+        }
+        System.out.println(count);
+    }
+
+    void insertAfterEnhanced(int _data, int _index) {
+        //validation
+        if(index != null){
+            System.out.println("Node is null");
+            return;
+        }
+        LinkedListNode newNode = new LinkedListNode(_data);  //create new node
+        newNode.next = node.next;  //make the new node pointer same as the chosen node pointer
+        node.next = newNode;  //make the node pointer is the new node
+        if(this.tail == node){
+            this.tail = newNode;
+        }
+    }
+
 
 }
 
