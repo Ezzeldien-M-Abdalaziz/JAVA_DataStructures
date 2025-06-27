@@ -89,18 +89,38 @@ class LinkedList {
         return null;
     }
 
-    void count(){
+    int findByIndex(int index) {
+        //validation
+        if(index > this.count() || index < 0){
+            return 0;
+        }
+        int count = 0;
+        for (LinkedListIterator itr = this.begin(); itr.current() != null; itr = itr.next()){
+            if(count == index){
+                return itr.data();
+            }
+            count++;
+        }
+        return 0;
+    }
+
+    int count(){
         int count = 0;
         for (LinkedListIterator itr = this.begin(); itr.current() != null; itr = itr.next()){
             count++;
         }
-        System.out.println(count);
+        return count;
     }
 
-    void insertAfterEnhanced(int _data, int _index) {
+    void insertAfterEnhanced(int _data, int index) {
         //validation
-        if(index != null){
-            System.out.println("Node is null");
+        if(index > this.count() || index < 0){
+            System.out.println("offset index : " + index);
+            return;
+        }
+        LinkedListNode node =  this.find(this.findByIndex(index));    //this gets the node of the index
+        if(node == null){
+            System.out.println("node is null");
             return;
         }
         LinkedListNode newNode = new LinkedListNode(_data);  //create new node

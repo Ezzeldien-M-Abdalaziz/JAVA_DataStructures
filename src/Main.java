@@ -43,6 +43,12 @@ public class Main {
         list.printList();
         System.out.println(list.tail.data);
 
-        list.count();
+        System.out.println(list.count());
+        System.out.println(list.findByIndex(6));
+
+        list.insertAfterEnhanced(80 , 6);
+        list.insertAfter(5 , list.head);
+
+        list.printList();
     }
 }
