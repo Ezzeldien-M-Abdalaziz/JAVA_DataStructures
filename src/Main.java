@@ -32,8 +32,14 @@ public class Main {
         System.out.println(list.tail.data);  //last
         list.printList();  // Output: 10 -> 20 -> 30 -> null
 
+        LinkedListNode node1 = list.find(30);
+        list.insertAfter(40, node1);
 
-        list.insertAfter(40 , list.tail);
+        LinkedListNode node2 = list.find(40);
+        list.insertAfter(50, node2);
+
+        list.insertAfter(60 , list.tail);
+        list.insertAfter(70 , list.tail);
         list.printList();
         System.out.println(list.tail.data);
     }

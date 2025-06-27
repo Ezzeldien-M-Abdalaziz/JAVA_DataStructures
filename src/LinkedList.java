@@ -80,6 +80,15 @@ class LinkedList {
             }
    }
 
+   LinkedListNode find(int _data) {
+        for (LinkedListIterator itr = this.begin(); itr.current() != null; itr = itr.next()){
+            if(itr.data() == _data){
+                return itr.current();
+            }
+        }
+        return null;
+    }
+
 
 }
 
