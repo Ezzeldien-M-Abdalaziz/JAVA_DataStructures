@@ -139,7 +139,7 @@ class LinkedList {
         }
     }
 
-
+    //insert before a node
     void insertBefore(int _data, int index) {
         //validation
         if(index > this.count() || index < 0){
@@ -167,6 +167,43 @@ class LinkedList {
         }
 
     }
+
+    void deleteNode(int index){
+        //validation
+        if(index > this.count() || index < 0){
+            throw new IndexOutOfBoundsException("Index out of bounds: " + index);
+        }
+        LinkedListNode toDelete =  this.find(this.findByIndex(index));    //this gets the node of the index
+        if(toDelete == null){
+            System.out.println("node is null");
+            return;
+        }
+
+        // delete head
+        if(index == 0){
+            this.head = this.head.next;
+            if(this.head == null) {
+                this.tail = null; // list is now empty
+            }
+            return;
+        }
+
+
+        if (toDelete == this.tail) {
+            LinkedListNode parent = this.findParent(toDelete);
+            if (parent != null) {
+                parent.next = null;
+            }
+            this.tail = parent;
+            return;
+        }
+
+        LinkedListNode parent = this.findParent(toDelete);
+        parent.next = toDelete.next;
+
+
+    }
+
 
 
 
