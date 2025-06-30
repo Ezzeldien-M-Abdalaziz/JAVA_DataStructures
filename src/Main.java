@@ -101,5 +101,15 @@ public class Main {
         list.deleteNode(0);
         list.printList();
 
+        list.insertBefore(4,1);
+        list.insertBefore(3,0);
+        list.insertBefore(2,0);
+        list.insertBefore(1,0);
+        list.insertBefore(0,0);
+
+        list.insertBefore(-1,2);
+
+        list.printList();
+
     }
 }

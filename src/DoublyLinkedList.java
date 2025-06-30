@@ -152,6 +152,33 @@ class DoublyLinkedList {
         node.back.next = node.next;
     }
 
+    void insertBefore(int data , int index){
+        DoublyLinkedListNode newNode = new DoublyLinkedListNode(data);  //create new node from the data
+
+        //there are no nodes case
+        if(this.head == null){
+            this.head = newNode;
+            this.tail = newNode;
+            return;
+        }
+
+        DoublyLinkedListNode node =  this.findByIndex(index);  //index node
+
+        //node is head case
+        if(node == this.head){
+            node.back = newNode;
+            newNode.next = node;
+            this.head = newNode;
+            return;
+        }
+
+        //other cases
+            node.back.next = newNode;
+            newNode.back = node.back;
+            node.back = newNode;
+            newNode.next = node;
+    }
+
 }
 
 
