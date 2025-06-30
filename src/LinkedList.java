@@ -177,6 +177,7 @@ class LinkedList {
             throw new IndexOutOfBoundsException("Index out of bounds: " + index);
         }
         LinkedListNode toDelete =  this.find(this.findByIndex(index));    //this gets the node of the index
+
         if(toDelete == null){
             System.out.println("node is null");
             return;
@@ -203,7 +204,6 @@ class LinkedList {
 
         parent.next = toDelete.next;
     }
-
 
 
 
