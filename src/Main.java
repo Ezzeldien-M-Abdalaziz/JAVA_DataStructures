@@ -61,5 +61,25 @@ public class Main {
         list.insertBefore(144,4);
         list.printList();
 
+        list.deleteNode(1);
+        list.printList();
+
+        list.deleteNode(0);
+        list.printList();
+
+        list.deleteNode(list.count()-1);
+        list.printList();
+
+        LinkedList list2 = new LinkedList();
+        list2.insertLast(10);
+        list2.printList();
+        System.out.println(list2.head.data);
+        System.out.println(list2.tail.data);
+        list2.deleteNode(0);
+        list2.printList();
+//        System.out.println(list2.head.data);
+//        System.out.println(list2.tail.data);
+
+
     }
 }

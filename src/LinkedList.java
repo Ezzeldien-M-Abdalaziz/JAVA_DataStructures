@@ -49,6 +49,9 @@ class LinkedList {
    }
 
    void printList(){
+        if(this.head == null){
+            System.out.println("[]");
+        }
         for (LinkedListIterator itr = this.begin(); itr.current() != null; itr = itr.next()){
             System.out.print(itr.data() + " -> ");
         }
@@ -188,9 +191,9 @@ class LinkedList {
             return;
         }
 
+        LinkedListNode parent = this.findParent(toDelete);
 
         if (toDelete == this.tail) {
-            LinkedListNode parent = this.findParent(toDelete);
             if (parent != null) {
                 parent.next = null;
             }
@@ -198,10 +201,7 @@ class LinkedList {
             return;
         }
 
-        LinkedListNode parent = this.findParent(toDelete);
         parent.next = toDelete.next;
-
-
     }
 
 
