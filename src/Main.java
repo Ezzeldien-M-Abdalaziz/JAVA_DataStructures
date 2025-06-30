@@ -82,34 +82,44 @@ public class Main {
 
         //**********************************************Doubly LinkedList********************************************
 
-        DoublyLinkedList list = new DoublyLinkedList();
-        list.insertLast(1);
-        list.insertLast(2);
-        list.insertLast(3);
-        System.out.println(list.head.data);
-        System.out.println(list.tail.data);
-        System.out.println(list.tail.back.data);
-        System.out.println(list.head.next.data);
-        System.out.println(list.count());
-        list.printList();
-        System.out.println(list.findByIndex(0));
-        System.out.println(list.findByIndex(1).data);
-        System.out.println(list.findByData(3));
-        System.out.println(list.count());
-        list.deleteNode(2);
-        list.deleteNode(1);
-        list.deleteNode(0);
-        list.printList();
+//        DoublyLinkedList list = new DoublyLinkedList();
+//        list.insertLast(1);
+//        list.insertLast(2);
+//        list.insertLast(3);
+//        System.out.println(list.head.data);
+//        System.out.println(list.tail.data);
+//        System.out.println(list.tail.back.data);
+//        System.out.println(list.head.next.data);
+//        System.out.println(list.count());
+//        list.printList();
+//        System.out.println(list.findByIndex(0));
+//        System.out.println(list.findByIndex(1).data);
+//        System.out.println(list.findByData(3));
+//        System.out.println(list.count());
+//        list.deleteNode(2);
+//        list.deleteNode(1);
+//        list.deleteNode(0);
+//        list.printList();
+//
+//        list.insertBefore(4,1);
+//        list.insertBefore(3,0);
+//        list.insertBefore(2,0);
+//        list.insertBefore(1,0);
+//        list.insertBefore(0,0);
+//
+//        list.insertBefore(-1,2);
+//
+//        list.printList();
 
-        list.insertBefore(4,1);
-        list.insertBefore(3,0);
-        list.insertBefore(2,0);
-        list.insertBefore(1,0);
-        list.insertBefore(0,0);
+        //**********************************************Doubly LinkedList********************************************
 
-        list.insertBefore(-1,2);
 
-        list.printList();
+
+
+
+
+
+
 
     }
 }
