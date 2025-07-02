@@ -42,6 +42,7 @@ class LinkedListIterator{
 class LinkedList {
    public LinkedListNode head = null;
    public LinkedListNode tail = null;
+   public int length;
 
     LinkedListIterator begin(){
        LinkedListIterator itr = new LinkedListIterator(this.head);
@@ -67,6 +68,7 @@ class LinkedList {
            this.tail.next = newNode;    //exp 10 -> 20 "tail" -> null   becomes 10 -> 20 "tail" -> 30
            this.tail = newNode;   //exp 10 -> 20 "tail" -> 30 becomes 10 -> 20 -> 30 "tail"
        }
+       this.length++;
    }
 
    void insertAfter(int _data, LinkedListNode node) {
@@ -81,6 +83,7 @@ class LinkedList {
             if(this.tail == node){
                 this.tail = newNode;
             }
+            this.length++;
    }
 
    LinkedListNode find(int _data) {
@@ -140,6 +143,7 @@ class LinkedList {
         if(this.tail == node){
             this.tail = newNode;
         }
+        this.length++;
     }
 
     //insert before a node
@@ -168,6 +172,7 @@ class LinkedList {
             newNode.next = node;
             parent.next = newNode;
         }
+        this.length++;
 
     }
 
@@ -189,6 +194,7 @@ class LinkedList {
             if(this.head == null) {
                 this.tail = null; // list is now empty
             }
+            this.length--;
             return;
         }
 
@@ -199,14 +205,36 @@ class LinkedList {
                 parent.next = null;
             }
             this.tail = parent;
+            this.length--;
             return;
         }
 
         parent.next = toDelete.next;
+        this.length--;
     }
 
 
+    void insertFirst(int _data){
+        LinkedListNode newNode = new LinkedListNode(_data);
+        if(this.head == null){
+            this.head = newNode;
+            this.tail = newNode;
+            this.length++;
+            return;
+        }
+        newNode.next = this.head;
+        this.head = newNode;
+        this.length++;
+    }
 
+    void deleteHead(){
+        if(this.head == null){
+            System.out.println("head is null");
+            return;
+        }
+        this.head = this.head.next;
+        this.length--;
+    }
 
 }
 

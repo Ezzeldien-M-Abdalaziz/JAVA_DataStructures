@@ -77,8 +77,21 @@ public class Main {
 //        System.out.println(list2.tail.data);
 //        list2.deleteNode(0);
 //        list2.printList();
-//        System.out.println(list2.head.data);
-//        System.out.println(list2.tail.data);
+//
+//        LinkedList list3 = new LinkedList();
+//        list3.insertLast(10);
+//        list3.insertLast(11);
+//        list3.insertLast(12);
+//        list3.insertLast(13);
+//        list3.printList();
+//        System.out.println(list3.length);
+//        list3.deleteNode(0);
+//        list3.deleteNode(0);
+//        list3.deleteNode(0);
+//        list3.deleteNode(0);
+//        list3.printList();
+//        System.out.println(list3.length);
+
 
         //**********************************************Doubly LinkedList********************************************
 
