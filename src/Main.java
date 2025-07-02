@@ -124,8 +124,22 @@ public class Main {
 //
 //        list.printList();
 
-        //**********************************************Doubly LinkedList********************************************
+        //********************************************** Stack ********************************************
 
+        Stack stack = new Stack();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        System.out.println(stack.peek());
+        stack.print();
+        stack.pop();
+        stack.pop();
+        stack.print();
+        System.out.println(stack.isEmpty());
+        stack.pop();
+        stack.pop();
+        System.out.println(stack.isEmpty());
 
 
 
