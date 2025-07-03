@@ -124,23 +124,27 @@ public class Main {
 //
 //        list.printList();
 
-        //********************************************** Stack ********************************************
+        //********************************************** linked list based Stack ********************************************
 
-        Stack stack = new Stack();
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        stack.push(4);
-        System.out.println(stack.size());
-        System.out.println(stack.peek());
-        stack.print();
-        stack.pop();
-        stack.pop();
-        stack.print();
-        System.out.println(stack.isEmpty());
-        stack.pop();
-        stack.pop();
-        System.out.println(stack.isEmpty());
+            Stack stack = new Stack();
+            stack.push(1);
+            stack.push(2);
+            stack.push(3);
+            stack.push(4);
+            System.out.println(stack.size());
+            System.out.println(stack.peek());
+            stack.print();
+            stack.pop();
+            stack.pop();
+            stack.print();
+            System.out.println(stack.isEmpty());
+            stack.pop();
+            stack.pop();
+            stack.print();
+            System.out.println(stack.isEmpty());
+            System.out.println(stack.size());
+
+        //********************************************** array based Stack ********************************************
 
 
 

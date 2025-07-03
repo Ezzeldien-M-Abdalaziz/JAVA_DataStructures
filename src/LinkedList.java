@@ -52,6 +52,7 @@ class LinkedList {
    void printList(){
         if(this.head == null){
             System.out.println("[]");
+            return;
         }
         for (LinkedListIterator itr = this.begin(); itr.current() != null; itr = itr.next()){
             System.out.print(itr.data() + " -> ");
