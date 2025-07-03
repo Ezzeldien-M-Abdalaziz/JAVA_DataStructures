@@ -1,8 +1,8 @@
 # JAVA Data Structure
-** Still in Progress **
-Data Structures implementation in Java
+** Still in Progress ** <br>
+Data Structures implementation in Java <br>
 
--Array
--LinkedList
--Stack "Linked List based"
--Stack "Array based"
+-Array <br>
+-LinkedList <br>
+-Stack "Linked List based" <br>
+-Stack "Array based" <br>
