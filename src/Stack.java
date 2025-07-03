@@ -25,6 +25,10 @@ public class Stack {
     void print(){
         this.dataList.printList();
     }
+
+    int size(){
+        return this.dataList.length;
+    }
 }
 
 

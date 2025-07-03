@@ -131,6 +131,7 @@ public class Main {
         stack.push(2);
         stack.push(3);
         stack.push(4);
+        System.out.println(stack.size());
         System.out.println(stack.peek());
         stack.print();
         stack.pop();
@@ -140,10 +141,6 @@ public class Main {
         stack.pop();
         stack.pop();
         System.out.println(stack.isEmpty());
-
-
-
-
 
 
 
