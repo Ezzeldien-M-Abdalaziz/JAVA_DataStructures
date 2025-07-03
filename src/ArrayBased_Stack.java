@@ -12,10 +12,10 @@ public class ArrayBased_Stack {
     }
 
     void resizeOrNot(){
-        if(this.top_index < this.current_size -1) return ;  //if elements < the actual size of stack
+        if(this.top_index < this.current_size -1) return ;  //if num of elements < the actual size of stack
         System.out.println("will be resized");
         int[] newArray = new int[this.current_size + this.initial_size];
-        System.arraycopy(this.dataList, 0, newArray, 0, this.initial_size + this.current_size);
+        System.arraycopy(this.dataList, 0, newArray, 0, this.current_size);  //copies array
         this.current_size += this.initial_size;
         this.dataList = newArray;
     }
@@ -31,6 +31,11 @@ public class ArrayBased_Stack {
         return this.dataList[this.top_index];
     }
 
+    /*
+        in the pop we can check after pop the element ,
+        if the elements in the stack are less than the actual size of the array then we can resize it
+        and shrink it, but it's considered overcomplicated since we can use the free size later on.
+     */
     int pop(){
         if(this.top_index == -1) return 0;
         int head_data = this.dataList[this.top_index];
@@ -38,6 +43,26 @@ public class ArrayBased_Stack {
         this.top_index--;   //
         return head_data;
     }
+
+    boolean isEmpty(){
+        return this.top_index == -1;     //here we check by top_index because it's the real size of the stack , but the current_size is the size of the array even if it's empty.
+    }
+
+    int size(){
+        return this.top_index+1;   //this returns the actual size of the stack , THE NUM OF ELEMENTS.
+    }
+
+    void print (){
+        System.out.println("_ _ _");
+        for(int i = this.top_index; i >= 0; i--){
+            System.out.println("| " + this.dataList[i] + " |");
+        }
+            System.out.println("_ _ _");
+    }
+
+
+
+
 
 
 }

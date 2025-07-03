@@ -146,7 +146,24 @@ public class Main {
 
         //********************************************** array based Stack ********************************************
 
-
+        ArrayBased_Stack arrayStack = new ArrayBased_Stack();
+        System.out.println(arrayStack.isEmpty());
+        arrayStack.push(1);
+        arrayStack.push(2);
+        arrayStack.push(3);
+        arrayStack.push(4);
+        arrayStack.push(5);
+        System.out.println(arrayStack.isEmpty());
+        System.out.println(arrayStack.size());
+        System.out.println(arrayStack.peek());
+        arrayStack.print();
+        arrayStack.pop();
+        arrayStack.pop();
+        arrayStack.print();
+        arrayStack.push(6);
+        arrayStack.push(6);
+        arrayStack.push(6);
+        arrayStack.print();
 
 
     }
