@@ -167,6 +167,25 @@ public class Main {
 
     //********************************************** Queue ********************************************
 
+        Queue queue = new Queue();
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+        queue.enqueue(4);
+        System.out.println(queue.length);
+        queue.print();
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.length);
+        System.out.println(queue.isEmpty());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.isEmpty());
+        System.out.println(queue.length);
+        System.out.println(queue.size());
+
+
+
 
 
 
