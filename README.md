@@ -6,3 +6,4 @@ Data Structures implementation in Java <br>
 -LinkedList <br>
 -Stack "Linked List based" <br>
 -Stack "Array based" <br>
+-Queue "Linked List based" <br>
