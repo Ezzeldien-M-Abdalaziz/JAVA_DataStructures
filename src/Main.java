@@ -168,26 +168,24 @@ public class Main {
     //********************************************** Queue ********************************************
 
         Queue queue = new Queue();
-        queue.enqueue(1);
-        queue.enqueue(2);
-        queue.enqueue(3);
-        queue.enqueue(4);
-        System.out.println(queue.length);
-        queue.print();
-        System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
-        System.out.println(queue.length);
+        queue.enqueue(8);
+        queue.enqueue(16);
+        queue.enqueue(32);
+        queue.enqueue(64);
+
         System.out.println(queue.isEmpty());
-        System.out.println(queue.dequeue());
+
+        while(!queue.isEmpty()){
+            System.out.println("peek:"+ queue.peek());
+            System.out.println("dequeue:"+ queue.dequeue());
+            System.out.println("size:"+ queue.size());
+            queue.print();
+            System.out.println("-----");
+        }
+
         System.out.println(queue.isEmpty());
-        System.out.println(queue.length);
-        System.out.println(queue.size());
 
-
-
-
-
+    //********************************************** Queue ********************************************
 
 
 
