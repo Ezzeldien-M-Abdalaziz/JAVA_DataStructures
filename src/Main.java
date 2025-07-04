@@ -126,44 +126,58 @@ public class Main {
 
         //********************************************** linked list based Stack ********************************************
 
-            Stack stack = new Stack();
-            stack.push(1);
-            stack.push(2);
-            stack.push(3);
-            stack.push(4);
-            System.out.println(stack.size());
-            System.out.println(stack.peek());
-            stack.print();
-            stack.pop();
-            stack.pop();
-            stack.print();
-            System.out.println(stack.isEmpty());
-            stack.pop();
-            stack.pop();
-            stack.print();
-            System.out.println(stack.isEmpty());
-            System.out.println(stack.size());
+    //            Stack stack = new Stack();
+    //            stack.push(1);
+    //            stack.push(2);
+    //            stack.push(3);
+    //            stack.push(4);
+    //            System.out.println(stack.size());
+    //            System.out.println(stack.peek());
+    //            stack.print();
+    //            stack.pop();
+    //            stack.pop();
+    //            stack.print();
+    //            System.out.println(stack.isEmpty());
+    //            stack.pop();
+    //            stack.pop();
+    //            stack.print();
+    //            System.out.println(stack.isEmpty());
+    //            System.out.println(stack.size());
 
         //********************************************** array based Stack ********************************************
 
-        ArrayBased_Stack arrayStack = new ArrayBased_Stack();
-        System.out.println(arrayStack.isEmpty());
-        arrayStack.push(1);
-        arrayStack.push(2);
-        arrayStack.push(3);
-        arrayStack.push(4);
-        arrayStack.push(5);
-        System.out.println(arrayStack.isEmpty());
-        System.out.println(arrayStack.size());
-        System.out.println(arrayStack.peek());
-        arrayStack.print();
-        arrayStack.pop();
-        arrayStack.pop();
-        arrayStack.print();
-        arrayStack.push(6);
-        arrayStack.push(6);
-        arrayStack.push(6);
-        arrayStack.print();
+    //        ArrayBased_Stack arrayStack = new ArrayBased_Stack();
+    //        System.out.println(arrayStack.isEmpty());
+    //        arrayStack.push(1);
+    //        arrayStack.push(2);
+    //        arrayStack.push(3);
+    //        arrayStack.push(4);
+    //        arrayStack.push(5);
+    //        System.out.println(arrayStack.isEmpty());
+    //        System.out.println(arrayStack.size());
+    //        System.out.println(arrayStack.peek());
+    //        arrayStack.print();
+    //        arrayStack.pop();
+    //        arrayStack.pop();
+    //        arrayStack.print();
+    //        arrayStack.push(6);
+    //        arrayStack.push(6);
+    //        arrayStack.push(6);
+    //        arrayStack.print();
+
+    //********************************************** Queue ********************************************
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
