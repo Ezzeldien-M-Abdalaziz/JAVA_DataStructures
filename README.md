@@ -102,11 +102,12 @@ A **simple dictionary** (like a basic HashMap) to store key-value pairs.
 
 ## 📁 Project Structure
 
-src/
-├── MyArray.java
-├── LinkedList.java
-├── ArrayBasedStack.java
-├── LinkedListBasedStack.java
-├── LinkedListBasedQueue.java
-├── Dictionary.java
-└── Main.java
+- [MyArray.java](src/Array.java) – Custom dynamic array implementation
+- [LinkedList.java](src/LinkedList.java) – Singly linked list
+- [DoublyLinkedList.java](src/DoublyLinkedList.java) – Doubly linked list
+- [ArrayBasedStack.java](src/ArrayBased_Stack.java) – Stack using array
+- [LinkedListBasedStack.java](src/Stack.java) – Stack using linked list
+- [LinkedListBasedQueue.java](src/Queue.java) – Queue using linked list
+- [Dictionary.java](src/Dictionary.java) – Key-value store (dictionary)
+- [Main.java](src/Main.java) – Entry point for testing the structures  
+
