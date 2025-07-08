@@ -70,12 +70,24 @@ public class Dictionary <Tkey , Tvalue> {
 
     public void print(){
         System.out.println("Size: " + this.size());
-        if(this.entriesCount == 0){
-            return;
-        }
         for(int i = 0; i < this.entriesCount; i++){
             System.out.println(this.entries[i].get_key() + ": " + this.entries[i].get_value());
         }
+        System.out.println("=============");
+    }
+
+
+    public void printAll(){
+        System.out.println("Size: " + this.entriesCount + "/" + this.entries.length);
+        for(int i = 0; i < this.entries.length; i++){  // Loop through ENTIRE array
+            if(this.entries[i] == null){
+                System.out.println("[" + i + "] null");
+            }
+            else{
+                System.out.println("[" + i + "] " + this.entries[i].get_key() + ": " + this.entries[i].get_value());
+            }
+        }
+        System.out.println("=============");
     }
 
     public static class KeyValuePair<K, V>{

@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -190,13 +192,15 @@ public class Main {
         Dictionary <Integer, String> dictionary= new Dictionary<>();
         System.out.println(dictionary.size());
 
+        dictionary.printAll();
+
         dictionary.set(1,"c++");
         dictionary.set(2,"java");
         dictionary.set(3,"php");
         dictionary.set(4,"js");
         dictionary.set(5,"python");
 
-        dictionary.print();
+        dictionary.printAll();
 
         dictionary.remove(2);
 
@@ -204,18 +208,10 @@ public class Main {
         dictionary.set(6,"ts");
         dictionary.set(7,"rust");
         dictionary.set(8,"go");
-        dictionary.print();
-
+        dictionary.printAll();
 
         System.out.println(dictionary.get(3));
         System.out.println(dictionary.get(2));
-
-
-
-
-
-
-
 
 
     }
