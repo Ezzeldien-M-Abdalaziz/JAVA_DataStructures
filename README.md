@@ -1,4 +1,4 @@
-# 📚 Java Data Structures
+# 📚 Data Structures
 
 A clean and educational Java project implementing core data structures from scratch. This repository helps reinforce the internal working of data structures without relying on built-in Java utilities.
 

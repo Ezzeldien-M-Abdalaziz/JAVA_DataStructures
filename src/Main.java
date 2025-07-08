@@ -167,27 +167,48 @@ public class Main {
 
     //********************************************** Queue ********************************************
 
-        Queue queue = new Queue();
-        queue.enqueue(8);
-        queue.enqueue(16);
-        queue.enqueue(32);
-        queue.enqueue(64);
+//        Queue queue = new Queue();
+//        queue.enqueue(8);
+//        queue.enqueue(16);
+//        queue.enqueue(32);
+//        queue.enqueue(64);
+//
+//        System.out.println(queue.isEmpty());
+//
+//        while(!queue.isEmpty()){
+//            System.out.println("peek:"+ queue.peek());
+//            System.out.println("dequeue:"+ queue.dequeue());
+//            System.out.println("size:"+ queue.size());
+//            queue.print();
+//            System.out.println("-----");
+//        }
+//
+//        System.out.println(queue.isEmpty());
 
-        System.out.println(queue.isEmpty());
+    //********************************************** Dictionary ********************************************
 
-        while(!queue.isEmpty()){
-            System.out.println("peek:"+ queue.peek());
-            System.out.println("dequeue:"+ queue.dequeue());
-            System.out.println("size:"+ queue.size());
-            queue.print();
-            System.out.println("-----");
-        }
+        Dictionary <Integer, String> dictionary= new Dictionary<>();
+        System.out.println(dictionary.size());
 
-        System.out.println(queue.isEmpty());
+        dictionary.set(1,"c++");
+        dictionary.set(2,"java");
+        dictionary.set(3,"php");
+        dictionary.set(4,"js");
+        dictionary.set(5,"python");
 
-    //********************************************** Queue ********************************************
+        dictionary.print();
+
+        dictionary.remove(2);
+
+        dictionary.print();
+        dictionary.set(6,"ts");
+        dictionary.set(7,"rust");
+        dictionary.set(8,"go");
+        dictionary.print();
 
 
+        System.out.println(dictionary.get(3));
+        System.out.println(dictionary.get(2));
 
 
 
