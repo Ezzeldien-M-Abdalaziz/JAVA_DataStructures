@@ -189,30 +189,35 @@ public class Main {
 
     //********************************************** Dictionary ********************************************
 
-        Dictionary <Integer, String> dictionary= new Dictionary<>();
-        System.out.println(dictionary.size());
+//        Dictionary <Integer, String> dictionary= new Dictionary<>();
+//        System.out.println(dictionary.size());
+//
+//        dictionary.printAll();
+//
+//        dictionary.set(1,"c++");
+//        dictionary.set(2,"java");
+//        dictionary.set(3,"php");
+//        dictionary.set(4,"js");
+//        dictionary.set(5,"python");
+//
+//        dictionary.printAll();
+//
+//        dictionary.remove(2);
+//
+//        dictionary.print();
+//        dictionary.set(6,"ts");
+//        dictionary.set(7,"rust");
+//        dictionary.set(8,"go");
+//        dictionary.printAll();
+//
+//        System.out.println(dictionary.get(3));
+//        System.out.println(dictionary.get(2));
 
-        dictionary.printAll();
 
-        dictionary.set(1,"c++");
-        dictionary.set(2,"java");
-        dictionary.set(3,"php");
-        dictionary.set(4,"js");
-        dictionary.set(5,"python");
+        //********************************************** Hash Function ********************************************
 
-        dictionary.printAll();
-
-        dictionary.remove(2);
-
-        dictionary.print();
-        dictionary.set(6,"ts");
-        dictionary.set(7,"rust");
-        dictionary.set(8,"go");
-        dictionary.printAll();
-
-        System.out.println(dictionary.get(3));
-        System.out.println(dictionary.get(2));
-
+        HashFunctions hf = new HashFunctions();
+        System.out.println(hf.hash32("This is Original Text"));
 
     }
 }

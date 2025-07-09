@@ -78,7 +78,7 @@ public class Dictionary <Tkey , Tvalue> {
 
 
     public void printAll(){
-        System.out.println("Size: " + this.entriesCount + "/" + this.entries.length);
+        System.out.println("Size: " + this.entriesCount + "/" + this. entries.length);
         for(int i = 0; i < this.entries.length; i++){  // Loop through ENTIRE array
             if(this.entries[i] == null){
                 System.out.println("[" + i + "] null");
