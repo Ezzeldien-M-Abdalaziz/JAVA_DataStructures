@@ -21,4 +21,5 @@ public class HashFunctions {
 
         return hash;
     }
+
 }
