@@ -223,9 +223,43 @@ public class Main {
 
         //********************************************** Hash table ********************************************
 
-
-
-
+        HashTable<String, String> hashTable = new HashTable<>();
+        hashTable.print();
+        hashTable.set("Sinar" , "sinar@gmail.com");
+        hashTable.set("Elvis" , "elvis@gmail.com");
+        hashTable.set("Tane" , "tane@gmail.com");
+        hashTable.print();
+        System.out.println(hashTable.get("tane"));
+        hashTable.set("ezz" , "sinar@gmail.com");
+        hashTable.set("ahmed" , "elvis@gmail.com");
+        hashTable.set("omar" , "tane@gmail.com");
+        hashTable.print();
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -27,22 +27,25 @@ public class HashTable <Tkey , Tvalue>{
             hash &= 0xFFFFFFFFL;    // Keep it 32-bit
         }
 
-        System.out.println(key + ", hash code: " + hash + "x (0x" + Long.toHexString(hash) + ")");
+        System.out.println(key + ", hash code: " + hash + "x (0x" + Long.toHexString(hash) + ")" + " index: " + (int)(Math.abs(hash) % this.entries.length));
 
-        return (int)hash % this.entries.length;
+        return (int)(Math.abs(hash) % this.entries.length);
+
     }
 
 
     int CollisionHandler(Tkey key , int hash , boolean Set) {
 
         //linear probing solution to the collision problem  //note::there are other ways to solve this problem like "exp:double hashing"
-        int newHash;
-        for(int i = 1; i < this.entriesCount; i++){
-            newHash = (hash + i ) % this.entries.length;
-            if(Set && (this.entries[newHash] == null || this.entries[newHash]._key == key)){
+        for (int i = 1; i < this.entries.length; i++) {
+            int newHash = (hash + i) % this.entries.length;
+            System.out.println("🔍 Probing index " + newHash + " for key: " + key);
+
+            if (Set && (this.entries[newHash] == null || this.entries[newHash]._key.equals(key))) {
+                System.out.println("✅ Found spot at index " + newHash + " for key: " + key);
                 return newHash;
-            }
-            else if (!Set && this.entries[newHash]._key == key) {
+            } else if (!Set && this.entries[newHash] != null && this.entries[newHash]._key.equals(key)) {
+                System.out.println("✅ Found key at index " + newHash);
                 return newHash;
             }
         }
@@ -84,7 +87,7 @@ public class HashTable <Tkey , Tvalue>{
         System.arraycopy(this.entries, 0, entriesCopy, 0, this.entries.length);   //copy the entries
 
         this.entries = new KeyValuePair[newSize];  //make a new entries with the new size
-
+        this.entriesCount = 0;
         for(int i = 0; i < entriesCopy.length; i++){
             if(entriesCopy[i] != null){
                 this.AddToEntries(entriesCopy[i]._key , entriesCopy[i]._value);
@@ -119,9 +122,14 @@ public class HashTable <Tkey , Tvalue>{
     }
 
     public void print(){
-        System.out.println("Size: " + this.size());
-        for(int i = 0; i < this.entriesCount; i++){
-            System.out.println(this.entries[i].get_key() + ": " + this.entries[i].get_value());
+        System.out.println("Size: " + this.entriesCount + "/" + this. entries.length);
+        for(int i = 0; i < this.entries.length; i++){  // Loop through ENTIRE array
+            if(this.entries[i] == null){
+                System.out.println("[" + i + "] null");
+            }
+            else{
+                System.out.println("[" + i + "] " + this.entries[i].get_key() + ": " + this.entries[i].get_value());
+            }
         }
         System.out.println("=============");
     }
