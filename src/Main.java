@@ -216,8 +216,16 @@ public class Main {
 
         //********************************************** Hash Function ********************************************
 
-        HashFunctions hf = new HashFunctions();
-        System.out.println(hf.hash32("This is Original Text"));
+    //        HashFunctions hf = new HashFunctions();
+    //        System.out.println(hf.hash32("This is Original Text"));
+
+
+
+        //********************************************** Hash table ********************************************
+
+
+
+
 
     }
 }
