@@ -1,45 +1,41 @@
-public class Stack {
-    private LinkedList dataList;
-    Stack() {
-        this.dataList = new LinkedList();
+public class Stack<T> {
+    private LinkedList<T> dataList;
+
+    public Stack() {
+        this.dataList = new LinkedList<>();
     }
 
-    void push(int data) {
+    public void push(T data) {
         this.dataList.insertFirst(data);
     }
 
-    int pop() {
-        int head_data = this.dataList.head.data;
+    public T pop() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty");
+            return null;
+        }
+        T headData = this.dataList.head.data;
         this.dataList.deleteHead();
-        return head_data;
+        return headData;
     }
 
-    int peek(){
+    public T peek() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty");
+            return null;
+        }
         return this.dataList.head.data;
     }
 
-    boolean isEmpty(){
+    public boolean isEmpty() {
         return this.dataList.length <= 0;
     }
 
-    void print(){
+    public void print() {
         this.dataList.printList();
     }
 
-    int size(){
+    public int size() {
         return this.dataList.length;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

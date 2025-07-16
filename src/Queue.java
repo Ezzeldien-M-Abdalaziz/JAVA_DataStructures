@@ -1,36 +1,36 @@
-public class Queue {
-    private LinkedList dataList ;
-    int length ;
+public class Queue<T> {
+    private LinkedList<T> dataList;
+    int length;
 
     public Queue() {
-        dataList = new LinkedList();
+        dataList = new LinkedList<>();
         length = 0;
     }
 
-    void enqueue(int data) {
+    void enqueue(T data) {
         this.dataList.insertLast(data);
         this.length++;
     }
 
-
-    int dequeue() {
-        if(isEmpty()) {
+    T dequeue() {
+        if (isEmpty()) {
             System.out.println("Queue is empty");
-            return 0;
+            return null;
         }
-        LinkedListNode head = this.dataList.head;
+        T data = this.dataList.head.data;
         this.dataList.deleteHead();
         this.length--;
-        return head.data;
+        return data;
     }
 
-    int peek() {
-        if(isEmpty()) {
+    T peek() {
+        if (isEmpty()) {
             System.out.println("Queue is empty");
-            return 0;
+            return null;
         }
         return this.dataList.head.data;
     }
+
     int size() {
         return this.length;
     }
@@ -38,24 +38,8 @@ public class Queue {
     boolean isEmpty() {
         return this.dataList.head == null;
     }
-    void print(){
+
+    void print() {
         this.dataList.printList();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
