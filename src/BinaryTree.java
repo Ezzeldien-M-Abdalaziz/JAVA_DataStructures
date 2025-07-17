@@ -12,8 +12,10 @@ public class BinaryTree<Tdata> {
         Queue<TreeNode<Tdata>> q = new Queue<>();
         q.enqueue(this.Root);
 
-        while (q.hasData()) {
-            TreeNode<Tdata> currentNode = q.dequeue();
+        while (q.hasData()) {   //walk through the whole tree till we find null
+            TreeNode<Tdata> currentNode = q.dequeue();   //current node == this.root
+
+            //this keeps adding nodes to the queue til it finds a free place
 
             if (currentNode.Left == null) {
                 currentNode.Left = newNode;
@@ -45,13 +47,11 @@ public class BinaryTree<Tdata> {
         boolean hasRight = node.Right != null;
 
         if (hasLeft || hasRight) {
+            //recursion used here
             printTree(node.Left, prefix + (isLeft ? "│   " : "    "), true);
             printTree(node.Right, prefix + (isLeft ? "│   " : "    "), false);
         }
     }
-
-
-
 
 
 
