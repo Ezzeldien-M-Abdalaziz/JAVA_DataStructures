@@ -42,4 +42,8 @@ public class Queue<T> {
     void print() {
         this.dataList.printList();
     }
+
+    boolean hasData(){
+        return this.dataList.head != null;
+    }
 }

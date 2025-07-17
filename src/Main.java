@@ -240,7 +240,14 @@ public class Main {
 
 
 
+        BinaryTree<String> tree = new BinaryTree<>();
+        tree.Insert("A");
+        tree.Insert("B");
+        tree.Insert("C");
+        tree.Insert("D");
+        tree.Insert("E");
 
+        tree.printTree();
 
 
 
