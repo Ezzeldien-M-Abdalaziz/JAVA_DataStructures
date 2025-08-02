@@ -127,6 +127,18 @@ public class BinaryTree<Tdata> {
     }
 
 
+    public void preOrderTraversal(){
+        internalPreOrderTraversal(this.Root);
+        System.out.println();
+    }
+
+    public void internalPreOrderTraversal(TreeNode<Tdata> node){
+        if (node == null) return;
+        System.out.print(node.Data + " -> ");
+        internalPreOrderTraversal(node.Left);
+        internalPreOrderTraversal(node.Right);
+    }
+
     public static class TreeNode<Tdata>{
         public Tdata Data;
         public TreeNode<Tdata> Left;

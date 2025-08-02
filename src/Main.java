@@ -264,6 +264,8 @@ public class Main {
 
        System.out.println("Height : " + tree.height());
 
+       tree.preOrderTraversal();
+
 
 
 
