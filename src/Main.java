@@ -271,8 +271,9 @@ public class Main {
         System.out.print("post order Traversal : ");
         tree.postOrderTraversal();
 
-//       System.out.println(tree.getLastNode(tree.Root).Data);
-        tree.getLastNode(tree.Root);
+
+
+
 
 
 

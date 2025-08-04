@@ -175,22 +175,77 @@ public class BinaryTree<Tdata> {
     //end postOrderTraversal
 
 
+    //****************************delete******************************
+
     //get most-right last node
-    public void getLastNode(TreeNode<Tdata> node){
-        if (node == null) return;
-        if (node.Right == null) {
-            System.out.println("Last (rightmost) node: " + node.Data);
-            return;
-        }
-        getLastNode(node.Right);
+    public int leftBranchHeight(TreeNode<Tdata> node){
+        if (node == null) return 0;
+        return 1 + Math.max(leftBranchHeight(node.Left) , 0);
     }
 
+    public int rightBranchHeight(TreeNode<Tdata> node){
+        if (node == null) return 0;
+        return 1 + Math.max(rightBranchHeight(node.Right) , 0);
+    }
+
+    public TreeNode<Tdata> getLastNode(TreeNode<Tdata> node) {
+        if (node == null) return null;
+        Tdata a;
+        if (this.leftBranchHeight(node) > this.rightBranchHeight(node)) {
+            if (node.Left != null) {
+                return getLastNode(node.Left);
+            } else {
+                return node;
+            }
+        } else {
+            if (node.Right != null) {
+                return getLastNode(node.Right);
+            } else {
+                return node;
+            }
+        }
+    }
+    // end get most-right last node
+
+    //find parent of the deleted node
+    public TreeNode<Tdata> getParent(TreeNode<Tdata> node){
+        if(this.Root == node){
+            return null;   //no parent
+        }
+
+        Queue<TreeNode<Tdata>> q = new Queue<>();
+        q.enqueue(this.Root);
+
+        while (q.hasData()){
+            TreeNode<Tdata> currentNode = q.dequeue();
+
+            if (currentNode.Left == node) {
+                return currentNode;
+            } else {
+                q.enqueue(currentNode.Left);
+            }
+
+            if (currentNode.Right == node) {
+                return currentNode;
+            } else {
+                q.enqueue(currentNode.Right);
+            }
+        }
+        return null;
+    }
+    //end find parent of the deleted node
 
 
 
 
 
-    //delete
+
+
+
+
+
+
+
     //replace the deleted node with the right-most node in the tree
 //    public void deleteNode(TreeNode<Tdata> node){
 //        if (node == null) return;
