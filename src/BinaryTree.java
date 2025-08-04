@@ -175,98 +175,92 @@ public class BinaryTree<Tdata> {
     //end postOrderTraversal
 
 
-    //****************************delete******************************
-
     //get most-right last node
-    public int leftBranchHeight(TreeNode<Tdata> node){
-        if (node == null) return 0;
-        return 1 + Math.max(leftBranchHeight(node.Left) , 0);
-    }
+    public TreeNode<Tdata> getLastNode() {
+        if (this.Root == null) return null;
 
-    public int rightBranchHeight(TreeNode<Tdata> node){
-        if (node == null) return 0;
-        return 1 + Math.max(rightBranchHeight(node.Right) , 0);
-    }
+        Queue<TreeNode<Tdata>> q = new Queue<>();
+        q.enqueue(this.Root);
+        TreeNode<Tdata> last = null;
 
-    public TreeNode<Tdata> getLastNode(TreeNode<Tdata> node) {
-        if (node == null) return null;
-        Tdata a;
-        if (this.leftBranchHeight(node) > this.rightBranchHeight(node)) {
-            if (node.Left != null) {
-                return getLastNode(node.Left);
-            } else {
-                return node;
-            }
-        } else {
-            if (node.Right != null) {
-                return getLastNode(node.Right);
-            } else {
-                return node;
-            }
+        while (q.hasData()) {
+            last = q.dequeue();
+            if (last.Left != null) q.enqueue(last.Left);
+            if (last.Right != null) q.enqueue(last.Right);
         }
+
+        return last;
     }
     // end get most-right last node
 
     //find parent of the deleted node
     public TreeNode<Tdata> getParent(TreeNode<Tdata> node){
-        if(this.Root == node){
-            return null;   //no parent
-        }
+        if (this.Root == node) return null;
 
         Queue<TreeNode<Tdata>> q = new Queue<>();
         q.enqueue(this.Root);
 
-        while (q.hasData()){
-            TreeNode<Tdata> currentNode = q.dequeue();
+        while (q.hasData()) {
+            TreeNode<Tdata> current = q.dequeue();
 
-            if (currentNode.Left == node) {
-                return currentNode;
-            } else {
-                q.enqueue(currentNode.Left);
+            if (current.Left == node || current.Right == node) {
+                return current;
             }
 
-            if (currentNode.Right == node) {
-                return currentNode;
-            } else {
-                q.enqueue(currentNode.Right);
-            }
+            if (current.Left != null) q.enqueue(current.Left);
+            if (current.Right != null) q.enqueue(current.Right);
         }
+
         return null;
     }
     //end find parent of the deleted node
 
     //delete
-    public void deleteNode(TreeNode<Tdata> node){
-        if (node == null) return;
+    public void deleteNode(TreeNode<Tdata> nodeToDelete){
+        if (nodeToDelete == null || this.Root == null) return;
+
         //get the last node
-        TreeNode<Tdata> lastNode = this.getLastNode(this.Root);
-        TreeNode<Tdata> ParentNode = this.getParent(node);
+        TreeNode<Tdata> lastNode = getLastNode();
+        if (lastNode == null) return;
+        nodeToDelete.Data = lastNode.Data;
 
-        if(node.Left != null){
-            lastNode.Left = node.Left;
-        }
-        if(node.Right != null){
-            lastNode.Right = node.Right;
+        // Now delete the last node from its current position
+        TreeNode<Tdata> parentOfLast = getParent(lastNode);
+        if (parentOfLast != null) {
+            if (parentOfLast.Left == lastNode) {
+                parentOfLast.Left = null;
+            } else if (parentOfLast.Right == lastNode) {
+                parentOfLast.Right = null;
+            }
+        } else {
+            // If deleting root and it's the only node
+            this.Root = null;
         }
 
-        if (ParentNode != null) {
-            if (ParentNode.Left == node) {
-                ParentNode.Left = lastNode;
-            }
-            if (ParentNode.Right == node) {
-                ParentNode.Right = lastNode;
-            }
-        }
     }
-
 
 
     //find
-    public TreeNode<Tdata> getnode(Tdata val){
+    public TreeNode<Tdata> find(Tdata val) {
+        if (this.Root == null) return null;
+        if (this.Root.Data.equals(val)) return this.Root;
 
+        Queue<TreeNode<Tdata>> q = new Queue<>();
+        q.enqueue(this.Root);
+
+        while (q.hasData()) {
+            TreeNode<Tdata> current = q.dequeue();
+
+            if (current.Data.equals(val)) {
+                return current;
+            }
+
+            if (current.Left != null) q.enqueue(current.Left);
+            if (current.Right != null) q.enqueue(current.Right);
+        }
+
+        return null;
     }
-
-
 
 
 

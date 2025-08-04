@@ -272,9 +272,10 @@ public class Main {
         tree.postOrderTraversal();
 
 
+        BinaryTree.TreeNode<Character> nodeToDelete = tree.find('D');
+        tree.deleteNode(nodeToDelete);
 
-
-
+        tree.printTree(); // after deletion
 
 
 
