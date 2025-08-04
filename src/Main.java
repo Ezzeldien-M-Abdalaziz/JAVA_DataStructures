@@ -240,22 +240,22 @@ public class Main {
 
 
 
-        BinaryTree<Integer> tree = new BinaryTree<>();
-        tree.Insert(1);
-        tree.Insert(2);
-        tree.Insert(3);
-        tree.Insert(5);
-        tree.Insert(6);
-        tree.Insert(7);
-        tree.Insert(8);
-        tree.Insert(9);
-        tree.Insert(10);
-        tree.Insert(11);
-        tree.Insert(12);
-        tree.Insert(13);
-        tree.Insert(14);
-        tree.Insert(15);
-        tree.Insert(16);
+        BinaryTree<Character> tree = new BinaryTree<>();
+        tree.Insert('A');
+        tree.Insert('B');
+        tree.Insert('C');
+        tree.Insert('D');
+        tree.Insert('E');
+        tree.Insert('F');
+        tree.Insert('G');
+        tree.Insert('H');
+        tree.Insert('I');
+//        tree.Insert('j');
+//        tree.Insert('k');
+//        tree.Insert('l');
+//        tree.Insert('m');
+//        tree.Insert('n');
+
 //        tree.Insert(17);
 //        tree.Insert(18);
 
@@ -264,10 +264,15 @@ public class Main {
 
        System.out.println("Height : " + tree.height());
 
-       tree.preOrderTraversal();
+        System.out.print("pre order Traversal : ");
+        tree.preOrderTraversal();
+        System.out.print("in order Traversal : ");
+        tree.inOrderTraversal();
+        System.out.print("post order Traversal : ");
+        tree.postOrderTraversal();
 
-
-
+//       System.out.println(tree.getLastNode(tree.Root).Data);
+        tree.getLastNode(tree.Root);
 
 
 

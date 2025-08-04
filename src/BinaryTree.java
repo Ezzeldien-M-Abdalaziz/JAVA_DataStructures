@@ -5,6 +5,7 @@ import java.util.List;
 public class BinaryTree<Tdata> {
     TreeNode<Tdata> Root;
 
+    //insert
     public void Insert(Tdata _data) {
         TreeNode<Tdata> newNode = new TreeNode<>(_data);
 
@@ -116,6 +117,7 @@ public class BinaryTree<Tdata> {
 
 
 
+    //height
     public int height() {
         return this.internalHeight(this.Root);
     }
@@ -125,8 +127,10 @@ public class BinaryTree<Tdata> {
         if (node == null) return -1;
         return 1 + Math.max(internalHeight(node.Left), internalHeight(node.Right));
     }
+    //end height
 
 
+    //preOrderTraversal   "*Depth-First*"
     public void preOrderTraversal(){
         internalPreOrderTraversal(this.Root);
         System.out.println();
@@ -138,6 +142,65 @@ public class BinaryTree<Tdata> {
         internalPreOrderTraversal(node.Left);
         internalPreOrderTraversal(node.Right);
     }
+    //end preOrderTraversal
+
+
+    //inOrderTraversal   "*Depth-First*"
+    public void inOrderTraversal(){
+        internalInOrderTraversal(this.Root);
+        System.out.println();
+    }
+
+    public void internalInOrderTraversal(TreeNode<Tdata> node){
+        if (node == null) return;
+        internalInOrderTraversal(node.Left);
+        System.out.print(node.Data + " -> ");
+        internalInOrderTraversal(node.Right);
+    }
+    //end inOrderTraversal
+
+
+    //postOrderTraversal   "*Depth-First*"
+    public void postOrderTraversal(){
+        internalPostOrderTraversal(this.Root);
+        System.out.println();
+    }
+
+    public void internalPostOrderTraversal(TreeNode<Tdata> node){
+        if (node == null) return;
+        internalPostOrderTraversal(node.Left);
+        internalPostOrderTraversal(node.Right);
+        System.out.print(node.Data + " -> ");
+    }
+    //end postOrderTraversal
+
+
+    //get most-right last node
+    public void getLastNode(TreeNode<Tdata> node){
+        if (node == null) return;
+        if (node.Right == null) {
+            System.out.println("Last (rightmost) node: " + node.Data);
+            return;
+        }
+        getLastNode(node.Right);
+    }
+
+
+
+
+
+
+    //delete
+    //replace the deleted node with the right-most node in the tree
+//    public void deleteNode(TreeNode<Tdata> node){
+//        if (node == null) return;
+//        //get the last node
+//        TreeNode<Tdata> lastNode =
+//    }
+
+
+
+
 
     public static class TreeNode<Tdata>{
         public Tdata Data;
