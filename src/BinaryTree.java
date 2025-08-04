@@ -235,23 +235,36 @@ public class BinaryTree<Tdata> {
     }
     //end find parent of the deleted node
 
+    //delete
+    public void deleteNode(TreeNode<Tdata> node){
+        if (node == null) return;
+        //get the last node
+        TreeNode<Tdata> lastNode = this.getLastNode(this.Root);
+        TreeNode<Tdata> ParentNode = this.getParent(node);
+
+        if(node.Left != null){
+            lastNode.Left = node.Left;
+        }
+        if(node.Right != null){
+            lastNode.Right = node.Right;
+        }
+
+        if (ParentNode != null) {
+            if (ParentNode.Left == node) {
+                ParentNode.Left = lastNode;
+            }
+            if (ParentNode.Right == node) {
+                ParentNode.Right = lastNode;
+            }
+        }
+    }
 
 
 
+    //find
+    public TreeNode<Tdata> getnode(Tdata val){
 
-
-
-
-
-
-
-
-    //replace the deleted node with the right-most node in the tree
-//    public void deleteNode(TreeNode<Tdata> node){
-//        if (node == null) return;
-//        //get the last node
-//        TreeNode<Tdata> lastNode =
-//    }
+    }
 
 
 
