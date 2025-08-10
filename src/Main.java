@@ -240,45 +240,44 @@ public class Main {
 
 
 
-        BinaryTree<Character> tree = new BinaryTree<>();
-        tree.Insert('A');
-        tree.Insert('B');
-        tree.Insert('C');
-        tree.Insert('D');
-        tree.Insert('E');
-        tree.Insert('F');
-        tree.Insert('G');
-        tree.Insert('H');
-        tree.Insert('I');
+//        BinaryTree<Character> tree = new BinaryTree<>();
+//        tree.Insert('A');
+//        tree.Insert('B');
+//        tree.Insert('C');
+//        tree.Insert('D');
+//        tree.Insert('E');
+//        tree.Insert('F');
+//        tree.Insert('G');
+//        tree.Insert('H');
+//        tree.Insert('I');
 //        tree.Insert('j');
 //        tree.Insert('k');
 //        tree.Insert('l');
-//        tree.Insert('m');
+//      tree.Insert('m');
 //        tree.Insert('n');
-
 //        tree.Insert(17);
 //        tree.Insert(18);
+//
+//
+//        tree.printTree();
+//
+//       System.out.println("Height : " + tree.height());
+//
+//        System.out.print("pre order Traversal : ");
+//        tree.preOrderTraversal();
+//        System.out.print("in order Traversal : ");
+//        tree.inOrderTraversal();
+//        System.out.print("post order Traversal : ");
+//        tree.postOrderTraversal();
+//
+//
+//        BinaryTree.TreeNode<Character> nodeToDelete = tree.find('D');
+//        tree.deleteNode(nodeToDelete);
+//
+//        tree.printTree(); // after deletion
 
 
-        tree.printTree();
-
-       System.out.println("Height : " + tree.height());
-
-        System.out.print("pre order Traversal : ");
-        tree.preOrderTraversal();
-        System.out.print("in order Traversal : ");
-        tree.inOrderTraversal();
-        System.out.print("post order Traversal : ");
-        tree.postOrderTraversal();
-
-
-        BinaryTree.TreeNode<Character> nodeToDelete = tree.find('D');
-        tree.deleteNode(nodeToDelete);
-
-        tree.printTree(); // after deletion
-
-
-
+//********************************************** Binary Search Tree ********************************************
 
 
 
