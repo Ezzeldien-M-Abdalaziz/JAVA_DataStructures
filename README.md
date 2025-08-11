@@ -131,6 +131,52 @@ Key Features:**
 - Handles both inserting new keys and updating existing keys
 
 - Prints debug info for hash values and probing during collisions
+
+
+### 8. Binary Tree
+**A binary tree implementation with support for insertion, deletion, searching, and multiple traversal orders.**
+
+**Key Features:**
+
+
+- Insert(data) – Inserts a node into the first available position (level-order insertion)
+
+- deleteNode(node) – Deletes a node by replacing it with the last node (level-order)
+
+- find(value) – Searches for a node containing the given value
+
+
+- **Traversals:**
+
+- Pre-order (Root → Left → Right)
+
+- In-order (Left → Root → Right)
+
+- Post-order (Left → Right → Root)
+
+
+- **Utility functions:**
+
+- height() – Returns the height of the tree
+
+- getLastNode() – Gets the last (rightmost) node
+
+- getParent(node) – Gets a node’s parent
+
+- printTree() – Pretty-prints the tree structure in a human-readable format
+
+**Time complexity (average case):**
+
+- Search: O(log n)
+
+- Insert: O(log n)
+
+- Delete: O(log n)
+
+- Worst case (unbalanced): O(n)
+
+
+
 ## 📁 Project Structure
 
 - [MyArray.java](src/Array.java) – Custom dynamic array implementation
@@ -141,6 +187,7 @@ Key Features:**
 - [LinkedListBasedQueue.java](src/Queue.java) – Queue using linked list
 - [Dictionary.java](src/Dictionary.java) – Key-value store (dictionary)
 - [HashTable.java](src/HashTable.java) - Hash table with FNV-1a hashing & linear probing
+- [BinaryTree.java](src/BinaryTree.java) – Binary tree with level-order insertion, deletion, search, and traversal methods
 - [Main.java](src/Main.java) – Entry point for testing the structures
 
 
