@@ -100,6 +100,37 @@ A **simple dictionary** (like a basic HashMap) to store key-value pairs.
 
 ---
 
+### 7. Hash Table
+**A hash table implementation using FNV-1a hashing for keys and linear probing for collision resolution.
+Key Features:**
+
+- set(key, value) to insert or update a key-value pair
+
+- get(key) to retrieve the value for a given key
+
+- Automatic resizing when capacity is reached
+
+- Uses linear probing to handle collisions
+
+- Hash function: FNV-1a 32-bit algorithm
+
+- Time complexity (ideal case):
+
+  - Insertion: O(1)
+
+  - Lookup: O(1)
+
+  - Worst case (full collisions): O(n)
+
+**Implementation details:**
+
+- Stores entries as an array of KeyValuePair objects
+
+- Automatically doubles the capacity when full
+
+- Handles both inserting new keys and updating existing keys
+
+- Prints debug info for hash values and probing during collisions
 ## 📁 Project Structure
 
 - [MyArray.java](src/Array.java) – Custom dynamic array implementation
@@ -109,5 +140,7 @@ A **simple dictionary** (like a basic HashMap) to store key-value pairs.
 - [LinkedListBasedStack.java](src/Stack.java) – Stack using linked list
 - [LinkedListBasedQueue.java](src/Queue.java) – Queue using linked list
 - [Dictionary.java](src/Dictionary.java) – Key-value store (dictionary)
-- [Main.java](src/Main.java) – Entry point for testing the structures  
+- [HashTable.java](src/HashTable.java) - Hash table with FNV-1a hashing & linear probing
+- [Main.java](src/Main.java) – Entry point for testing the structures
+
 
