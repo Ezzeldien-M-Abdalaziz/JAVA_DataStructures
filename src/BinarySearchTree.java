@@ -61,6 +61,7 @@ public class BinarySearchTree<Tdata extends Comparable<Tdata>> {
         return null; // not found
     }
 
+
     public NodeAndParent<Tdata> FindNodeAndParent(Tdata _data) {
         TreeNode<Tdata> currentNode = this.Root;
         TreeNode<Tdata> parent = null;
@@ -87,6 +88,18 @@ public class BinarySearchTree<Tdata extends Comparable<Tdata>> {
 
         return null; // not found
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     //chatgpt print pretty methods
