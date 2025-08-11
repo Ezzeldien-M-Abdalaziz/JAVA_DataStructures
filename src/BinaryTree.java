@@ -193,7 +193,7 @@ public class BinaryTree<Tdata> {
     }
     // end get most-right last node
 
-    //find parent of the deleted node
+    //find parent
     public TreeNode<Tdata> getParent(TreeNode<Tdata> node){
         if (this.Root == node) return null;
 
@@ -213,7 +213,7 @@ public class BinaryTree<Tdata> {
 
         return null;
     }
-    //end find parent of the deleted node
+    //end find parent
 
     //delete
     public void deleteNode(TreeNode<Tdata> nodeToDelete){
