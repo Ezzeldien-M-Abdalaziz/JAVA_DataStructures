@@ -91,7 +91,34 @@ public class BinarySearchTree<Tdata extends Comparable<Tdata>> {
 
 
 
+    public void delete(Tdata _data) {
+        NodeAndParent<Tdata> nodeAndParentInfo = this.FindNodeAndParent(_data);
+        if(nodeAndParentInfo == null) return;
 
+        if(nodeAndParentInfo.Node.Left != null && nodeAndParentInfo.Node.Right != null){
+            delete_Has_Childs(nodeAndParentInfo.Node);
+        }
+
+
+    }
+
+    public void delete_Has_Childs(TreeNode<Tdata> nodeToDelete) {
+        TreeNode<Tdata> currentNode = nodeToDelete.Right;
+        TreeNode<Tdata> parent = null;   //the smallest side's parent
+
+        while(currentNode.Left != null){
+            parent = currentNode;
+            currentNode = currentNode.Left;
+        }
+
+        if(parent != null){
+            parent.Left = currentNode.Right;
+        }else{
+            nodeToDelete.Right = currentNode.Right;
+        }
+
+        nodeToDelete.Data = currentNode.Data;
+    }
 
 
 

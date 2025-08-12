@@ -132,6 +132,7 @@ Key Features:**
 
 - Prints debug info for hash values and probing during collisions
 
+---
 
 ### 8. Binary Tree
 **A binary tree implementation with support for insertion, deletion, searching, and multiple traversal orders.**
