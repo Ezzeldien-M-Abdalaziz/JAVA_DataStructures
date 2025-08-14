@@ -113,7 +113,8 @@ public class BinarySearchTree<Tdata extends Comparable<Tdata>> {
 
         if(parent != null){
             parent.Left = currentNode.Right;
-        }else{
+        }
+        else{
             nodeToDelete.Right = currentNode.Right;
         }
 
