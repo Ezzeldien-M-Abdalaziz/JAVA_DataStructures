@@ -90,19 +90,21 @@ public class BinarySearchTree<Tdata extends Comparable<Tdata>> {
     }
 
 
-
     public void delete(Tdata _data) {
         NodeAndParent<Tdata> nodeAndParentInfo = this.FindNodeAndParent(_data);
         if(nodeAndParentInfo == null) return;
 
         if(nodeAndParentInfo.Node.Left != null && nodeAndParentInfo.Node.Right != null){
             delete_Has_Childs(nodeAndParentInfo.Node);
+        } else if (nodeAndParentInfo.Node.Left != null ^ nodeAndParentInfo.Node.Right != null) {   // ^ = XOR
+            delete_has_one_child(nodeAndParentInfo.Node);
+        }else{
+            delete_leaf(nodeAndParentInfo);
         }
-
-
     }
 
-    public void delete_Has_Childs(TreeNode<Tdata> nodeToDelete) {
+
+    public void delete_Has_Childs(TreeNode<Tdata> nodeToDelete)  {
         TreeNode<Tdata> currentNode = nodeToDelete.Right;
         TreeNode<Tdata> parent = null;   //the smallest side's parent
 
@@ -117,14 +119,34 @@ public class BinarySearchTree<Tdata extends Comparable<Tdata>> {
         else{
             nodeToDelete.Right = currentNode.Right;
         }
-
         nodeToDelete.Data = currentNode.Data;
     }
 
 
+    public void delete_has_one_child(TreeNode<Tdata> nodeToDelete) {
+        TreeNode<Tdata> nodeToReplace = null;
+        if(nodeToDelete.Left != null){
+            nodeToReplace = nodeToDelete.Left;
+        }else{
+            nodeToReplace = nodeToDelete.Right;
+        }
+        nodeToDelete.Data = nodeToReplace.Data;
+        nodeToDelete.Left = nodeToReplace.Left;
+        nodeToDelete.Right = nodeToReplace.Right;
+    }
 
 
-
+    public void delete_leaf(NodeAndParent<Tdata> nodeAndParentInfo) {
+        if(nodeAndParentInfo.Parent == null){
+            this.Root = null;
+        }else{
+            if(nodeAndParentInfo.IsLeft){
+                nodeAndParentInfo.Parent.Left = null;
+            }else {
+                nodeAndParentInfo.Parent.Right = null;
+            }
+        }
+    }
 
 
 
