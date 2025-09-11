@@ -280,26 +280,38 @@ public class Main {
 //********************************************** Binary Search Tree ********************************************
 
     BinarySearchTree<Integer> bst = new BinarySearchTree<Integer>();
+//        bst.insert(4);
+//        bst.insert(6);
+//        bst.insert(7);
+//        bst.insert(5);
+//        bst.insert(2);
+//        bst.insert(1);
+//        bst.insert(3);
+//
+//        bst.printTree();
+//
+//        System.out.println(bst.isExist(5));
+//        System.out.println(bst.isExist(50));
+//
+//        bst.delete(4);
+//        bst.printTree();
+//
+//        bst.delete(6);
+//        bst.printTree();
+//
+//        bst.delete(3);
+//        bst.printTree();
+
+        //balance
+        bst.insert(1);
+        bst.insert(2);
+        bst.insert(3);
         bst.insert(4);
+        bst.insert(5);
         bst.insert(6);
         bst.insert(7);
-        bst.insert(5);
-        bst.insert(2);
-        bst.insert(1);
-        bst.insert(3);
-
         bst.printTree();
-
-        System.out.println(bst.isExist(5));
-        System.out.println(bst.isExist(50));
-
-        bst.delete(4);
-        bst.printTree();
-
-        bst.delete(6);
-        bst.printTree();
-
-        bst.delete(3);
+        bst.balance();
         bst.printTree();
 
 

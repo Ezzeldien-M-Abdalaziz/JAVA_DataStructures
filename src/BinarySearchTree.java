@@ -90,6 +90,7 @@ public class BinarySearchTree<Tdata extends Comparable<Tdata>> {
     }
 
 
+    //begin delete functions
     public void delete(Tdata _data) {
         NodeAndParent<Tdata> nodeAndParentInfo = this.FindNodeAndParent(_data);
         if(nodeAndParentInfo == null) return;
@@ -148,7 +149,38 @@ public class BinarySearchTree<Tdata extends Comparable<Tdata>> {
         }
     }
 
+    //end delete
 
+
+
+
+    //balance function
+    public void balance(){
+        List<Tdata> nodes = new ArrayList<>();
+        InOrderToArray(this.Root, nodes);
+        this.Root = recursiveBalance(0 , nodes.size() - 1 , nodes);
+    }
+
+    void InOrderToArray(TreeNode<Tdata> node , List<Tdata> nodes){
+        if(node == null){
+            return;
+        }
+        InOrderToArray(node.Left, nodes);
+        nodes.add(node.Data);
+        InOrderToArray(node.Right, nodes);
+    }
+
+
+    public TreeNode<Tdata> recursiveBalance(int start , int end , List<Tdata> nodes){
+        if(start > end) return null;
+
+        int mid = (start + end)/2;
+        TreeNode<Tdata> newNode = new TreeNode<>(nodes.get(mid));
+        newNode.Left = recursiveBalance(start , mid - 1 , nodes);
+        newNode.Right = recursiveBalance(mid + 1 , end , nodes);
+        return newNode;
+    }
+    //end balance
 
 
 
