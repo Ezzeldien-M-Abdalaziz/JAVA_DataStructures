@@ -279,7 +279,7 @@ public class Main {
 
 //********************************************** Binary Search Tree ********************************************
 
-    BinarySearchTree<Integer> bst = new BinarySearchTree<Integer>();
+//    BinarySearchTree<Integer> bst = new BinarySearchTree<Integer>();
 //        bst.insert(4);
 //        bst.insert(6);
 //        bst.insert(7);
@@ -303,16 +303,21 @@ public class Main {
 //        bst.printTree();
 
         //balance
-        bst.insert(1);
-        bst.insert(2);
-        bst.insert(3);
-        bst.insert(4);
-        bst.insert(5);
-        bst.insert(6);
-        bst.insert(7);
-        bst.printTree();
-        bst.balance();
-        bst.printTree();
+//        bst.insert(1);
+//        bst.insert(2);
+//        bst.insert(3);
+//        bst.insert(4);
+//        bst.insert(5);
+//        bst.insert(6);
+//        bst.insert(7);
+//        bst.printTree();
+//        bst.balance();
+//        bst.printTree();
+
+//********************************************** Priority Queue ********************************************
+
+
+
 
 
     }
