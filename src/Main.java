@@ -328,6 +328,42 @@ public class Main {
         arrayBasedHeap.draw();
 
 
+        System.out.println("popped value: " + arrayBasedHeap.pop());
+        arrayBasedHeap.print();
+        arrayBasedHeap.draw();
+
+        System.out.println("popped value: " +arrayBasedHeap.pop());
+        arrayBasedHeap.print();
+        arrayBasedHeap.draw();
+
+        System.out.println("popped value: " +arrayBasedHeap.pop());
+        arrayBasedHeap.print();
+        arrayBasedHeap.draw();
+
+        System.out.println("popped value: " +arrayBasedHeap.pop());
+        arrayBasedHeap.print();
+        arrayBasedHeap.draw();
+
+        System.out.println("popped value: " +arrayBasedHeap.pop());
+        arrayBasedHeap.print();
+        arrayBasedHeap.draw();
+
+        System.out.println("popped value: " +arrayBasedHeap.pop());
+        arrayBasedHeap.print();
+        arrayBasedHeap.draw();
+
+        System.out.println("popped value: " +arrayBasedHeap.pop());
+        arrayBasedHeap.print();
+        arrayBasedHeap.draw();
+
+        System.out.println("popped value: " +arrayBasedHeap.pop());
+        arrayBasedHeap.print();
+        arrayBasedHeap.draw();
+
+        System.out.println("popped value: " +arrayBasedHeap.pop());
+        arrayBasedHeap.print();
+        arrayBasedHeap.draw();
+
 
 
 

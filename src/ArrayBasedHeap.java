@@ -44,13 +44,45 @@ public class ArrayBasedHeap<T extends Comparable<T>> {
         }
     }
 
-    void delete(){
-        int i = dataList.size();
+    T pop(){
+
+        if(this.dataList.isEmpty()){
+            return null;
+        }
+
+
+        int i = 0;
+        T data = this.dataList.get(i);
+
+        this.dataList.set(i, this.dataList.getLast());
+        this.dataList.removeLast();
+
+        int left_index = 2 * i + 1;
+
+        while(left_index < this.dataList.size()){
+            int right_index = 2 * i + 2;
+            int smallest_index = left_index;
+
+            if (right_index < this.dataList.size() &&
+                    this.dataList.get(right_index).compareTo(this.dataList.get(smallest_index)) < 0) {
+                smallest_index = right_index;
+            }
+
+            if(this.dataList.get(smallest_index).compareTo(this.dataList.get(i)) >= 0){
+                break;
+            }
+
+            T temp = this.dataList.get(i);
+            this.dataList.set(i, this.dataList.get(smallest_index));
+            this.dataList.set(smallest_index, temp);
+
+            i = smallest_index;
+            left_index = 2 * i + 1;
+
+        }
+        return data;
 
     }
-
-
-
 
 
 
@@ -83,8 +115,6 @@ public class ArrayBasedHeap<T extends Comparable<T>> {
             level++;
         }
     }
-
-
 
 
 }
