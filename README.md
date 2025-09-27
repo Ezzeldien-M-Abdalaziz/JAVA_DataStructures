@@ -177,6 +177,43 @@ Key Features:**
 - Worst case (unbalanced): O(n)
 
 
+### 9. Binary Search Tree (BST)
+
+**A binary search tree where each node’s left child is smaller, and the right child is greater. Supports insertion, search, deletion, traversals, and balancing.**
+
+**Key Features:**
+
+- insert(value) – Inserts a new node while maintaining BST property
+
+- delete(value) – Deletes a node (handles leaf, one child, or two children cases)
+
+- find(value) – Searches for a given value
+
+- balance() – Rebalances the tree using sorted array + divide-and-conquer
+
+- printTree() – Pretty-prints the tree structure
+
+**Traversals:**
+
+- Pre-order (Root → Left → Right)
+
+- In-order (Left → Root → Right)
+
+- Post-order (Left → Right → Root)
+
+**Utility:**
+
+- height() – Computes the height of the tree
+
+- Time complexity (average case):
+
+- Search: O(log n)
+
+- Insert: O(log n)
+
+- Delete: O(log n)
+
+- Worst case (unbalanced): O(n)
 
 ## 📁 Project Structure
 
@@ -189,6 +226,9 @@ Key Features:**
 - [Dictionary.java](src/Dictionary.java) – Key-value store (dictionary)
 - [HashTable.java](src/HashTable.java) - Hash table with FNV-1a hashing & linear probing
 - [BinaryTree.java](src/BinaryTree.java) – Binary tree with level-order insertion, deletion, search, and traversal methods
+- [BinarySearchTree.java](src/BinarySearchTree.java) Binary search tree with insertion, deletion, search, balancing, and traversal methods
+- [Heap.java](src/Heap.java)
+- [PriorityQueue.java](src/PriorityQueue.java)
 - [Main.java](src/Main.java) – Entry point for testing the structures
 
 
