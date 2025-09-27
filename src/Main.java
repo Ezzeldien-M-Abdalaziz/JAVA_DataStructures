@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -313,6 +311,26 @@ public class Main {
 //        bst.printTree();
 //        bst.balance();
 //        bst.printTree();
+
+//********************************************** Heap ********************************************
+
+    ArrayBasedHeap<Integer> arrayBasedHeap = new ArrayBasedHeap<>();
+        arrayBasedHeap.insert(24);
+        arrayBasedHeap.insert(32);
+        arrayBasedHeap.insert(16);
+        arrayBasedHeap.insert(45);
+        arrayBasedHeap.insert(20);
+        arrayBasedHeap.insert(53);
+        arrayBasedHeap.insert(14);
+        arrayBasedHeap.insert(27);
+
+        arrayBasedHeap.print();
+        arrayBasedHeap.draw();
+
+
+
+
+
 
 //********************************************** Priority Queue ********************************************
 

@@ -176,6 +176,7 @@ Key Features:**
 
 - Worst case (unbalanced): O(n)
 
+---
 
 ### 9. Binary Search Tree (BST)
 
@@ -227,7 +228,7 @@ Key Features:**
 - [HashTable.java](src/HashTable.java) - Hash table with FNV-1a hashing & linear probing
 - [BinaryTree.java](src/BinaryTree.java) – Binary tree with level-order insertion, deletion, search, and traversal methods
 - [BinarySearchTree.java](src/BinarySearchTree.java) Binary search tree with insertion, deletion, search, balancing, and traversal methods
-- [Heap.java](src/Heap.java)
+- [ArrayBasedHeap.java](src/ArrayBasedHeap.java)
 - [PriorityQueue.java](src/PriorityQueue.java)
 - [Main.java](src/Main.java) – Entry point for testing the structures
 
