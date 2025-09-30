@@ -314,61 +314,66 @@ public class Main {
 
 //********************************************** Heap ********************************************
 
-    ArrayBasedHeap<Integer> arrayBasedHeap = new ArrayBasedHeap<>();
-        arrayBasedHeap.insert(24);
-        arrayBasedHeap.insert(32);
-        arrayBasedHeap.insert(16);
-        arrayBasedHeap.insert(45);
-        arrayBasedHeap.insert(20);
-        arrayBasedHeap.insert(53);
-        arrayBasedHeap.insert(14);
-        arrayBasedHeap.insert(27);
-
-        arrayBasedHeap.print();
-        arrayBasedHeap.draw();
-
-
-        System.out.println("popped value: " + arrayBasedHeap.pop());
-        arrayBasedHeap.print();
-        arrayBasedHeap.draw();
-
-        System.out.println("popped value: " +arrayBasedHeap.pop());
-        arrayBasedHeap.print();
-        arrayBasedHeap.draw();
-
-        System.out.println("popped value: " +arrayBasedHeap.pop());
-        arrayBasedHeap.print();
-        arrayBasedHeap.draw();
-
-        System.out.println("popped value: " +arrayBasedHeap.pop());
-        arrayBasedHeap.print();
-        arrayBasedHeap.draw();
-
-        System.out.println("popped value: " +arrayBasedHeap.pop());
-        arrayBasedHeap.print();
-        arrayBasedHeap.draw();
-
-        System.out.println("popped value: " +arrayBasedHeap.pop());
-        arrayBasedHeap.print();
-        arrayBasedHeap.draw();
-
-        System.out.println("popped value: " +arrayBasedHeap.pop());
-        arrayBasedHeap.print();
-        arrayBasedHeap.draw();
-
-        System.out.println("popped value: " +arrayBasedHeap.pop());
-        arrayBasedHeap.print();
-        arrayBasedHeap.draw();
-
-        System.out.println("popped value: " +arrayBasedHeap.pop());
-        arrayBasedHeap.print();
-        arrayBasedHeap.draw();
+//    ArrayBasedHeap<Integer> arrayBasedHeap = new ArrayBasedHeap<>();
+//        arrayBasedHeap.insert(24);
+//        arrayBasedHeap.insert(32);
+//        arrayBasedHeap.insert(16);
+//        arrayBasedHeap.insert(45);
+//        arrayBasedHeap.insert(20);
+//        arrayBasedHeap.insert(53);
+//        arrayBasedHeap.insert(14);
+//        arrayBasedHeap.insert(27);
+//
+//        arrayBasedHeap.print();
+//        arrayBasedHeap.draw();
+//
+//
+//        System.out.println("popped value: " + arrayBasedHeap.pop());
+//        arrayBasedHeap.print();
+//        arrayBasedHeap.draw();
+//
+//        System.out.println("popped value: " +arrayBasedHeap.pop());
+//        arrayBasedHeap.print();
+//        arrayBasedHeap.draw();
+//
+//        System.out.println("popped value: " +arrayBasedHeap.pop());
+//        arrayBasedHeap.print();
+//        arrayBasedHeap.draw();
+//
+//        System.out.println("popped value: " +arrayBasedHeap.pop());
+//        arrayBasedHeap.print();
+//        arrayBasedHeap.draw();
+//
+//        System.out.println("popped value: " +arrayBasedHeap.pop());
+//        arrayBasedHeap.print();
+//        arrayBasedHeap.draw();
+//
+//        System.out.println("popped value: " +arrayBasedHeap.pop());
+//        arrayBasedHeap.print();
+//        arrayBasedHeap.draw();
+//
+//        System.out.println("popped value: " +arrayBasedHeap.pop());
+//        arrayBasedHeap.print();
+//        arrayBasedHeap.draw();
+//
+//        System.out.println("popped value: " +arrayBasedHeap.pop());
+//        arrayBasedHeap.print();
+//        arrayBasedHeap.draw();
+//
+//        System.out.println("popped value: " +arrayBasedHeap.pop());
+//        arrayBasedHeap.print();
+//        arrayBasedHeap.draw();
 
 
 
 
 
 //********************************************** Priority Queue ********************************************
+
+
+
+
+
 
 
 
